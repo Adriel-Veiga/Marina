@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz dia dos namorados!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav aria-label="Menu principal">
+    <span class="nav-logo">Te amo Marina</span>
+    <ul>
+      <li><a href="#contador">Tempo</a></li>
+      <li><a href="#timeline">História</a></li>
+      <li><a href="#galeria">Fotos</a></li>
+      <li><a href="#carta">Carta</a></li>
+    </ul>
+  </nav>
+
+  <section id="hero" aria-label="Tela inicial">
+    <canvas id="canvas-coracoes" aria-hidden="true"></canvas>
+    <div class="hero-conteudo revelar">
+      <p class="hero-eyebrow">Nosso primeiro dia dos namorados!</p>
+      <h1 class="hero-titulo">
+        Marina
+        <span>&amp; Adriel</span>
+      </h1>
+      <p class="hero-subtitulo">Achou que não ia ter nada né?</p>
+    </div>
+    <div class="hero-seta" aria-label="Rolar para baixo" role="button" tabindex="0">&#9660;</div>
+  </section>
+
+  <section id="contador" aria-label="Contador de tempo juntos">
+    <h2 class="secao-titulo revelar">Nos conhecemos há:</h2>
+    <div class="secao-linha revelar" aria-hidden="true"></div>
+    <div class="contador-grade revelar" aria-live="polite">
+      <div class="contador-bloco">
+        <span id="contador-dias" class="contador-numero">0</span>
+        <span class="contador-label">dias</span>
+      </div>
+      <div class="contador-bloco">
+        <span id="contador-horas" class="contador-numero">00</span>
+        <span class="contador-label">horas</span>
+      </div>
+      <div class="contador-bloco">
+        <span id="contador-minutos" class="contador-numero">00</span>
+        <span class="contador-label">minutos</span>
+      </div>
+      <div class="contador-bloco">
+        <span id="contador-segundos" class="contador-numero">00</span>
+        <span class="contador-label">segundos</span>
+      </div>
+    </div>
+    <p class="contador-desde revelar">Desde 2 de fevereiro de 2023 &mdash; e contando</p>
+  </section>
+
+  <section id="timeline" aria-label="Linha do tempo do casal">
+    <h2 class="secao-titulo revelar">Nossa História</h2>
+    <div class="secao-linha revelar" aria-hidden="true"></div>
+    <div class="timeline-wrapper" id="timeline-wrapper" aria-label="Eventos da nossa história"></div>
+  </section>
+
+  <section id="galeria" aria-label="Galeria de fotos do casal">
+    <h2 class="secao-titulo revelar">Nossas Fotos</h2>
+    <div class="secao-linha revelar" aria-hidden="true"></div>
+    <div class="galeria-grade">
+      <div class="galeria-item revelar" data-src="imagens/foto1.jpg">
+        <img src="imagens/foto1.jpg" />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto2.jpg">
+        <img src="imagens/foto2.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto3.jpg">
+        <img src="imagens/foto3.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto4.jpg">
+        <img src="imagens/foto4.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto5.jpg">
+        <img src="imagens/foto5.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto6.jpg">
+        <img src="imagens/foto6.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto7.jpg">
+        <img src="imagens/foto7.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto8.jpg">
+        <img src="imagens/foto8.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto9.jpg">
+        <img src="imagens/foto9.jpg"  />
+        </div>
+      <div class="galeria-item revelar" data-src="imagens/foto10.jpg">
+        <img src="imagens/foto10.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto11.jpg">
+        <img src="imagens/foto11.jpg"  />
+        </div>
+      <div class="galeria-item revelar" data-src="imagens/foto12.jpg">
+        <img src="imagens/foto12.jpg"  />
+        </div> 
+    <div class="galeria-item revelar" data-src="imagens/foto13.jpg">
+      <img src="imagens/foto13.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto14.jpg">
+        <img src="imagens/foto14.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto15.jpg">
+        <img src="imagens/foto15.jpg"  />
+        </div>
+    <div class="galeria-item revelar" data-src="imagens/foto16.jpg">
+      <img src="imagens/foto16.jpg"  />
+      </div>
+      <div class="galeria-item revelar" data-src="imagens/foto17.jpg">
+        <img src="imagens/foto17.jpg"  />
+        </div>
+      <div class="galeria-item revelar" data-src="imagens/foto18.jpg">
+        <img src="imagens/foto18.jpg"  />
+        </div>  
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar foto">
+    <button id="lightbox-fechar" class="lightbox-fechar" aria-label="Fechar foto">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <section id="carta" aria-label="Carta de amor">
+    <h2 class="secao-titulo revelar">Ainda não acabou</h2>
+    <p class="secao-subtitulo revelar">Escrevi uma carta pra você</p>
+    <div class="secao-linha revelar" aria-hidden="true"></div>
+    <div class="carta-envelope revelar" aria-hidden="true">💌</div>
+    <article class="carta-papel revelar" aria-label="Carta de amor">
+      <p class="carta-saudacao">Marina,</p>
+      <p>Às vezes, de madrugada, passo horas vendo nossas fotos e vídeos. Releio as mensagens suas que favoritei e já cheguei até a ler toda a nossa conversa, da primeira à última mensagem. Acho que isso resume o quanto eu gosto de você.</p>
+      <p>E, depois disso, quando fecho os olhos para dormir, espero sonhar com você. Algo que, assustadoramente, acontece e me faz acordar mais motivado para as minhas obrigações, porque sei que, no final do dia, vou te ver de novo.</p>
+      <p>Desculpa não poder ter te levado a um lugar legal hoje nem ter preparado algo muito elaborado, mas, ironicamente, foi justamente hoje que não consegui.</p>
+      <p>Quero terminar esta carta com uma pergunta: você quer sair comigo no dia 18 (próxima quinta-feira), às 19 horas, na "A Casinha"?</p>
+      <p class="carta-coracoes" aria-hidden="true">♥ ♥ ♥</p>
+      <p class="carta-assinatura">Com amor,<br /><strong>Adriel</strong></p>
+    </article>
+  </section>
+
+  <footer>
+    <p>Programado com <span class="footer-coracao">♥</span> para você &mdash; Adriel &amp; Marina &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
